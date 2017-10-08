@@ -1,0 +1,47 @@
+{
+    "name": "ridrog/light-boilerplate",
+    "description": "Light Boilerplate for Laravel Packages",
+    "type": "package",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": "^5.5"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.5.0",
+        "orchestra/database": "~3.5.0",
+        "phpunit/phpunit" : "^6.3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ridrog\\LightBoilerplate\\": "src/"
+        },
+        "files": [
+
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Ridrog\\LightBoilerplate\\Test\\": "tests"
+        }
+    },
+    "extra" : {
+        "laravel" : {
+            "providers" : [
+                "Ridrog\\LightBoilerplate\\LightBoilerplateServiceProvider"
+            ],
+            "aliases" : {
+
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "testbench": "composer require --dev \"orchestra/testbench-browser-kit=~3.5\" \"orchestra/database=~3.5\""
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
